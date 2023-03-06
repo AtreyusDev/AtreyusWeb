@@ -1,0 +1,268 @@
+/* Scrollbar */
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 8px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(120, 120, 219);
+    border-radius: 5px;
+}
+
+/* Nav Bar */
+
+.navbar {
+    padding: 2rem;
+}
+
+.nav-item {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.nav-link {
+    transition: 0.2s;
+}
+
+.nav-link:hover{
+    transform: scale(1.15);
+    border-bottom: solid 2px rgb(120, 120, 219);
+}
+
+@media screen and (max-width: 991px){
+    .nav-item {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 2%;
+    }
+
+    .nav-link:hover{
+        transform: scale(1.15);
+        border-bottom: none;
+    }
+}
+
+/* Font */
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+}
+
+/* Hero Section */
+
+.hero {
+    padding: 100px 100px 0px 100px;
+}
+
+.hero-image-logo {
+    max-width: 300px;
+    min-width: 150px;
+    margin: 0px 0px 80px 0px;
+}
+
+.hero-description {
+    text-align: center;
+    min-width: 120px;
+}
+
+@media screen and (max-width: 991px){
+    .hero-image-logo {
+        max-width: 150px;
+    }
+}
+
+.languages img{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.img-fluid {
+    min-width: 300px;
+    min-height: 150px;
+    margin-top: 50px;
+}
+
+
+@media screen and (max-width: 400px){
+    .img-fluid {
+        min-width: 200px;
+        min-height: 75px;
+        margin-top: 50px;
+    }
+    
+}
+
+/* Services Section */
+
+.services {
+    background-color: rgb(141, 161, 184);
+    margin-bottom: 100px;
+}
+
+.card-image-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.card {
+    margin: 60px 10px 60px 10px; 
+    text-align: center;
+    border-radius: 20px;
+    min-width: 16rem;
+    min-height: 41rem;
+    max-width: 18rem;
+    max-height: 58rem;
+}
+
+.card img{
+    display: flex;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+}
+
+@media screen and (max-width: 615px){
+    .services {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    transition: 0.2s;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: scale(1.15);
+    background-color: rgb(0, 38, 63);
+    color: rgb(0, 217, 255);
+    border: 0px;
+}
+
+@media screen and (max-width: 1115px){
+    .card {
+        margin: 30px 10px 30px 10px; 
+    }
+}
+
+/* Projects Section */
+
+.background {
+    background: linear-gradient(rgb(255, 255, 255), rgb(127, 127, 194));
+}
+
+.projects {
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-project {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 40rem;
+    margin-bottom: 100px;
+    box-shadow: 0 0 30px rgb(48, 48, 48);
+}
+
+.project-img {
+    min-height: 150px;
+    min-width: 200px;
+    max-height: 600px;
+}
+
+.card-title {
+    margin: 20px;
+}
+
+/* Contact Section */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+}
+
+.contact {
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 100px;
+    width: 400px;
+}
+
+.contact form {
+    min-width: 350px;
+}
+
+.contact input {
+    border-bottom: double 3px rgb(141, 161, 184);
+}
+
+.contact textarea {
+    border-bottom: double 3px rgb(141, 161, 184);
+}
+
+.button {
+    text-align: center;
+}
+
+.button button {
+    width: 80px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+.alert {
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 650px){
+    .contact form {
+        min-width: 200px;
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: rgb(36, 36, 36);
+    min-height: 200px;
+    bottom: 0px;
+    padding: 50px;
+}
+
+.social-networks img{
+    max-width: 40px;
+    transition: 0.2s;
+}
+
+.social-networks img:hover{
+    transform: scale(1.15);
+}
+
+.copyright {
+    text-align: center;
+    color: rgb(128, 128, 128);
+    padding-top: 15px;
+}
+

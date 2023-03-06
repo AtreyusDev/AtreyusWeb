@@ -1,0 +1,82 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- Hero Section -->
+
+    <section class="hero align-items-stretch">
+        <div class="container hero-principal d-flex flex-column justify-content-center align-items-center"  data-aos="fade-up" data-aos-duration="3000">
+            <img src="{% static 'images/profile-picture.png' %}" alt="Atreyusdev picture" class="hero-image-logo rounded-circle">
+            <h1>println("<span style="color: rgb(79, 79, 185);">¡Hello!</span>")</h1>
+            <h3 class="hero-description" data-aos="fade-right" data-aos-duration="2000" data-aos-delay="500">I create and desing projects and thats what I love to do.</h3>
+        </div>
+        <div class="image">
+            <img src="{% static 'images/computer.png' %}" alt="Programming image" class="img-fluid" data-aos="fade-left" data-aos-duration="1000">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+
+    <section class="container-fluid services">
+        <div class="row">
+            <!-- First Card -->
+            <div class="card" data-aos="flip-right">
+                <div class="card-image-top">
+                    <img src="{% static 'images/pincel.png' %}" alt="Desing">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Desing</h3>
+                  <p class="card-text">With more than 7 years of experience, I am able to make any type of design, supported by the Adobe package and extras.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Photoshop, Illustrator, Lightroom</li>
+                  <li class="list-group-item">Sony Vegas, Premiere, Movavi</li>
+                  <li class="list-group-item">Audition, FL Studio</li>
+                </ul>
+                <div class="card-body">
+                    <a href="{% static 'documents/cv.pdf' %}" target="_blank"><button type="button" class="btn btn-info">Download CV</button></a>
+                </div>
+            </div>
+            
+            <!-- Second Card -->
+            <div class="card" data-aos="flip-right" data-aos-delay="300">
+                <div class="card-image-top">
+                    <img src="{% static 'images/teclado.png' %}" alt="Programming">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Programming</h3>
+                  <p class="card-text">With +1 years of experience. Professionally with Scripting, Web Development, App Development, and Databases.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Python, JavaScript, Java</li>
+                  <li class="list-group-item">PostgreSQL, MySQL, API & JSON</li>
+                  <li class="list-group-item">Bootstrap, HTML, CSS, Django</li>
+                </ul>
+                <div class="card-body">
+                    <a href="{% static 'documents/CertificadoUdemyEnglish.jpg' %}" target="_blank"><button type="button" class="btn btn-info">Download Certificate</button></a>
+                </div>
+            </div>
+
+            <!-- Third Card -->
+            <div class="card" data-aos="flip-right" data-aos-delay="600">
+                <div class="card-image-top">
+                    <img src="{% static 'images/contact.png' %}" alt="Contact">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Contact</h3>
+                  <p class="card-text">I am happy to collaborate with you to make your ideas possible. We can discuss about the project, the objectives, and adjust a reasonable price for both parties. ¡Let´s contact!</p>
+                </div>
+                <div class="card-body">
+                    <a href="{% url 'contact' %}"><button type="button" class="btn btn-info">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About me Section -->
+
+    
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Contact Section -->
+
+<section class="container-fluid contact-section" data-aos="fade-up" data-aos-duration="2000">
+    <div class="contact d-flex flex-column justify-content-center align-items-center">
+        <h1 style="text-align: center; margin: 20px;"><strong>Contact</strong></h1>
+        <form action="" method="POST"> 
+        {% csrf_token %}
+            <div class="form-group" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+                <label for="exampleFormControlInput1">Name</label>
+                <input required name = 'name' type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your name" maxlength="30">
+            </div>
+            <div class="form-group" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input required name = 'email' type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" maxlength="50">
+            </div>
+            <div class="form-group" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea required name = 'message' class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="I want to contact with Atreyusdev" maxlength="400"></textarea>
+            </div>
+            <div class="button" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200">
+                <button type="submit" class="btn btn-info">Send</button>
+            </div>
+            {% if "message_sent" in request.GET %}
+                <div class="alert alert-info" role="alert">
+                    ¡Succesfully sent message! Check your email.
+                </div>
+            {% elif "sent_error" in request.GET %}
+                <div class="alert alert-warning" role="alert">
+                    An error occurred when sending your message. Please make sure you enter the data correctly.
+                </div>
+            {% endif %}
+        </form>
+
+    </div>
+</section>
+
+{% endblock %}

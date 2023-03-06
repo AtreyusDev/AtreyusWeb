@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="container-fluid background" data-aos="fade-up" data-aos-duration="2000">
+
+    <h1 style="text-align: center; margin: 20px; margin-bottom: 80px;"><strong>Projects</strong></h1>
+    
+
+    {% for project in projects %}
+
+    <div class="container projects">
+
+      <div class="card-project" data-aos="flip-right">
+        <div id="carouselExample{{project.counter}}" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators{{project.counter}}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators{{project.counter}}" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{{project.image1.url}}" class="d-block w-100 project-img" alt="First project image">
+              </div>
+              <div class="carousel-item">
+                <img src="{{project.image2.url}}" class="d-block w-100 project-img" alt="Second project image">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample{{project.counter}}" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample{{project.counter}}" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title">{{project.title}}</h3>
+          <p class="card-text">{{project.description}}</p>
+          <strong><p class="card-languages">{{project.languages}}</p></strong>
+          <a href="{{project.url}}" class="btn btn-primary">Visit Project Page</a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+
+</section>
+
+{% endblock %}
